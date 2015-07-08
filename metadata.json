@@ -43,10 +43,6 @@
   ],
   "dependencies": [
     {
-      "name": "puppetlabs/apache",
-      "version_requirement": ">= 1.0.1 < 2.0.0"
-    },
-    {
       "name": "puppetlabs/apt",
       "version_requirement": ">= 2.0.0 < 3.0.0"
     },
