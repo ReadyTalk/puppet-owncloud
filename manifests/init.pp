@@ -20,6 +20,7 @@ class owncloud (
   $ssl_cert        = undef,
   $ssl_chain       = undef,
   $ssl_key         = undef,
+  $ssl_cipher      = undef,
   $url             = "owncloud.${::domain}",
   $datadirectory   = $::owncloud::params::datadirectory,
 ) inherits ::owncloud::params {
