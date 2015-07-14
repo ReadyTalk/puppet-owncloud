@@ -41,6 +41,7 @@ class owncloud::apache {
         servername => $::owncloud::url,
         port       => $::owncloud::http_port,
         docroot    => $::owncloud::documentroot,
+        headers    => "always set Strict-Transport-Security \"max-age=15769835; preload\"",
         rewrites   => [
           {
             comment      => 'redirect non-SSL traffic to SSL site',
