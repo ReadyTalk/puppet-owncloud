@@ -17,6 +17,7 @@ class owncloud::apache {
   if $::owncloud::manage_vhost {
     $vhost_directories_common = {
         path            => $::owncloud::documentroot,
+        headers         => "add Strict-Transport-Security \"max-age=15768000\"",
         options         => ['Indexes', 'FollowSymLinks', 'MultiViews'],
         allow_override  => 'All',
         custom_fragment => 'Dav Off',
@@ -41,7 +42,6 @@ class owncloud::apache {
         servername => $::owncloud::url,
         port       => $::owncloud::http_port,
         docroot    => $::owncloud::documentroot,
-        headers    => "always set Strict-Transport-Security \"max-age=15769835; preload\"",
         rewrites   => [
           {
             comment      => 'redirect non-SSL traffic to SSL site',
