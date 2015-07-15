@@ -9,6 +9,7 @@ class owncloud::apache {
       default_vhost => false,
       mpm_module    => 'prefork',
       purge_configs => false,
+      server_tokens => 'prod',
     }
 
     include '::apache::mod::php', '::apache::mod::rewrite', '::apache::mod::ssl'
